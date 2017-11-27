@@ -43,7 +43,8 @@
 - (void)buildUIWithFrame:(CGRect)frame andAssets:(NSArray *)assertList{
     
     self.steps = assertList.count;
-    CGFloat lineWidth = (frame.size.width - kRBIconWH*4 - kRBGapWidth*2)/(self.steps - 1);
+    NSAssert(self.steps > 1, @"there must be more than noe step");
+    CGFloat lineWidth = (frame.size.width - kRBIconWH*self.steps - kRBGapWidth*2)/(self.steps - 1);
     for(int i = 0; i < self.steps; i++){
         
         NSDictionary *assetDict = [assertList objectAtIndex:i];
