@@ -6,10 +6,10 @@
 //  Copyright © 2017年 LeftH. All rights reserved.
 //
 
-#define kRBGapWidth 33.5f
+#define kRBGapWidth     33.5f
 #define kRBIconTopAlign 12.0f
-#define kRBIconWH   33.0f
-#define kRBLineH    6.0f
+#define kRBIconWH       33.0f
+#define kRBLineH        6.0f
 
 
 #import "RBStepProgressBar.h"
@@ -31,22 +31,20 @@
  }
  */
 
-- (instancetype)initWithFrame:(CGRect)frame andAssets:(NSArray *)assertList{
+- (void)setup{
     
-    self = [super initWithFrame:frame];
-    if(self){
-        [self buildUIWithFrame:frame andAssets:assertList];
+    NSArray *sourceList = [[NSArray alloc] init];
+    if([self.delegate respondsToSelector:@selector(stepProgressBarResourceList:)]){
+        sourceList = [self.delegate stepProgressBarResourceList:self];
     }
-    return self;
-}
 
-- (void)buildUIWithFrame:(CGRect)frame andAssets:(NSArray *)assertList{
-    
-    self.steps = assertList.count;
-    CGFloat lineWidth = (frame.size.width - kRBIconWH*4 - kRBGapWidth*2)/(self.steps - 1);
+    self.steps = sourceList.count;
+    NSAssert(self.steps > 1, @"there must be more than one step");
+    CGFloat lineWidth = (self.frame.size.width - kRBIconWH*self.steps - kRBGapWidth*2)/(self.steps - 1);
+    NSAssert(lineWidth > 0.0f, @"the width of line must be non-negative number");
     for(int i = 0; i < self.steps; i++){
         
-        NSDictionary *assetDict = [assertList objectAtIndex:i];
+        NSDictionary *assetDict = [sourceList objectAtIndex:i];
         RBStepIconImageView *iconImageView = [[RBStepIconImageView alloc] init];
         [self addSubview:iconImageView];
         [iconImageView setFrame:CGRectMake(kRBGapWidth + (lineWidth + kRBIconWH)*i, kRBIconTopAlign, kRBIconWH, kRBIconWH)];
@@ -59,6 +57,9 @@
         [stepTitleLabel sizeToFit];
         stepTitleLabel.center = CGPointMake((iconImageView.frame.size.width/2 + iconImageView.frame.origin.x), CGRectGetMaxY(iconImageView.frame) + 12.0f);
         stepTitleLabel.tag = i + 1;
+        if([self.delegate respondsToSelector:@selector(stepProgressBar:shouldHideStepTitleAtIndex:)]){
+            stepTitleLabel.hidden = [self.delegate stepProgressBar:self shouldHideStepTitleAtIndex:i];
+        }
         
         if(i != self.steps - 1){
             RBStepLineView *lineView = [[RBStepLineView alloc] init];

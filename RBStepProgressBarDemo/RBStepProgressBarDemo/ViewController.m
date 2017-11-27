@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "RBStepProgressBar.h"
 
-@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, RBStepProgressBarDelegate>
 @property (nonatomic, strong)RBStepProgressBar *stepProgressBar;
 @property (nonatomic, strong)UIPickerView *stepPickerView;
 @end
@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self buildUI];
+    [self setupStepProgressBar];
     [self setupPickerView];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -29,32 +29,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)buildUI{
+- (void)setupStepProgressBar{
     
-    self.stepProgressBar =  [[RBStepProgressBar alloc] initWithFrame:CGRectMake(0.0f, 80.0f, [UIScreen mainScreen].bounds.size.width, 80.0f) andAssets:@[
-                                                                                                                                                          @{
-                                                                                                                                                              @"notDoneIcon":@"notDone_1",
-                                                                                                                                                              @"doneIcon":@"done_1",
-                                                                                                                                                              @"stepTitle":@"第一步",
-                                                                                                                                                              },
-                                                                                                                                                          @{
-                                                                                                                                                              @"notDoneIcon":@"notDone_2",
-                                                                                                                                                              @"doneIcon":@"done_2",
-                                                                                                                                                              @"stepTitle":@"第二步",
-                                                                                                                                                              },
-                                                                                                                                                          @{
-                                                                                                                                                              @"notDoneIcon":@"notDone_3",
-                                                                                                                                                              @"doneIcon":@"done_3",
-                                                                                                                                                              @"stepTitle":@"第三步",
-                                                                                                                                                              },
-                                                                                                                                                          @{
-                                                                                                                                                              @"notDoneIcon":@"notDone_4",
-                                                                                                                                                              @"doneIcon":@"done_4",
-                                                                                                                                                              @"stepTitle":@"第四步",
-                                                                                                                                                              },
-                                                                                                                                                          
-                                                                                                ]];
+//    self.stepProgressBar =  [[RBStepProgressBar alloc] initWithFrame:CGRectMake(0.0f, 80.0f, [UIScreen mainScreen].bounds.size.width, 80.0f) andAssets:@[
+//                                                                                                                                                          @{
+//                                                                                                                                                              @"notDoneIcon":@"notDone_1",
+//                                                                                                                                                              @"doneIcon":@"done_1",
+//                                                                                                                                                              @"stepTitle":@"第一步",
+//                                                                                                                                                              },
+//                                                                                                                                                          @{
+//                                                                                                                                                              @"notDoneIcon":@"notDone_2",
+//                                                                                                                                                              @"doneIcon":@"done_2",
+//                                                                                                                                                              @"stepTitle":@"第二步",
+//                                                                                                                                                              },
+//                                                                                                                                                          @{
+//                                                                                                                                                              @"notDoneIcon":@"notDone_3",
+//                                                                                                                                                              @"doneIcon":@"done_3",
+//                                                                                                                                                              @"stepTitle":@"第三步",
+//                                                                                                                                                              },
+//                                                                                                                                                          @{
+//                                                                                                                                                              @"notDoneIcon":@"notDone_4",
+//                                                                                                                                                              @"doneIcon":@"done_4",
+//                                                                                                                                                              @"stepTitle":@"第四步",
+//                                                                                                                                                              },
+//
+//                                                                                                ]];
+    self.stepProgressBar = [[RBStepProgressBar alloc] initWithFrame:CGRectMake(0.0f, 80.0f, [UIScreen mainScreen].bounds.size.width, 80.0f)];
+    self.stepProgressBar.delegate = self;
     [self.view addSubview:self.stepProgressBar];
+    [self.stepProgressBar setup];
     [self.stepProgressBar setLoanBarProgress:RBProgressBarFirstStep];
 }
 
@@ -64,6 +67,39 @@
     [self.view addSubview:self.stepPickerView];
     self.stepPickerView.delegate = self;
     self.stepPickerView.dataSource = self;
+}
+
+#pragma mark -
+#pragma mark RBStepProgressBarDelegate
+- (NSArray *)stepProgressBarResourceList:(RBStepProgressBar *)stepProgressBar{
+    
+    return @[
+                                                                                                                                                                       @{
+                                                                                                                                                                           @"notDoneIcon":@"notDone_1",
+                                                                                                                                                                           @"doneIcon":@"done_1",
+                                                                                                                                                                           @"stepTitle":@"第一步",
+                                                                                                                                                                           },
+                                                                                                                                                                       @{
+                                                                                                                                                                           @"notDoneIcon":@"notDone_2",
+                                                                                                                                                                           @"doneIcon":@"done_2",
+                                                                                                                                                                           @"stepTitle":@"第二步",
+                                                                                                                                                                           },
+                                                                                                                                                                       @{
+                                                                                                                                                                           @"notDoneIcon":@"notDone_3",
+                                                                                                                                                                           @"doneIcon":@"done_3",
+                                                                                                                                                                           @"stepTitle":@"第三步",
+                                                                                                                                                                           },
+                                                                                                                                                                       @{
+                                                                                                                                                                           @"notDoneIcon":@"notDone_4",
+                                                                                                                                                                           @"doneIcon":@"done_4",
+                                                                                                                                                                           @"stepTitle":@"第四步",
+                                                                                                                                                                           },
+                                                                                                                                                                       ];
+}
+
+- (BOOL)stepProgressBar:(RBStepProgressBar *)stepProgressBar shouldHideStepTitleAtIndex:(NSUInteger)stepIndex{
+    
+    return NO;
 }
 
 #pragma mark -
