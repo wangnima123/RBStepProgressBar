@@ -19,6 +19,7 @@
 
 @interface RBStepProgressBar()
 @property (nonatomic, assign)NSUInteger steps;
+@property (nonatomic, weak)id<RBStepProgressBarDelegate> delegate;
 @end
 
 @implementation RBStepProgressBar
@@ -31,7 +32,17 @@
  }
  */
 
-- (void)setup{
+- (instancetype)initWithFrame:(CGRect)frame andDelegate:(id<RBStepProgressBarDelegate>)stepDelegate{
+    
+    self = [super initWithFrame:frame];
+    if(self){
+        self.delegate = stepDelegate;
+        [self setupWithFrame:frame];
+    }
+    return self;
+}
+
+- (void)setupWithFrame:(CGRect)frame{
     
     NSArray *sourceList = [[NSArray alloc] init];
     if([self.delegate respondsToSelector:@selector(stepProgressBarResourceList:)]){
@@ -40,7 +51,7 @@
 
     self.steps = sourceList.count;
     NSAssert(self.steps > 1, @"there must be more than one step");
-    CGFloat lineWidth = (self.frame.size.width - kRBIconWH*self.steps - kRBGapWidth*2)/(self.steps - 1);
+    CGFloat lineWidth = (frame.size.width - kRBIconWH*self.steps - kRBGapWidth*2)/(self.steps - 1);
     NSAssert(lineWidth > 0.0f, @"the width of line must be non-negative number");
     for(int i = 0; i < self.steps; i++){
         

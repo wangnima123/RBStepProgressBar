@@ -54,10 +54,8 @@
 //                                                                                                                                                              },
 //
 //                                                                                                ]];
-    self.stepProgressBar = [[RBStepProgressBar alloc] initWithFrame:CGRectMake(0.0f, 80.0f, [UIScreen mainScreen].bounds.size.width, 80.0f)];
-    self.stepProgressBar.delegate = self;
+    self.stepProgressBar = [[RBStepProgressBar alloc] initWithFrame:CGRectMake(0.0f, 80.0f, [UIScreen mainScreen].bounds.size.width, 80.0f) andDelegate:self];
     [self.view addSubview:self.stepProgressBar];
-    [self.stepProgressBar setup];
     [self.stepProgressBar setLoanBarProgress:RBProgressBarFirstStep];
 }
 

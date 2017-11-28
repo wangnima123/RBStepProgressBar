@@ -20,12 +20,14 @@ typedef NS_ENUM(NSInteger, RBProgressBarStep) {
 @protocol RBStepProgressBarDelegate;
 @interface RBStepProgressBar : UIView
 
-@property (nonatomic, weak)id<RBStepProgressBarDelegate> delegate;
-
 /**
- 构建UI视图
+ 创建分步骤栏实例
+
+ @param frame 控件的frame
+ @param stepDelegate 设置代理
+ @return 步骤栏实例
  */
-- (void)setup;
+-(instancetype)initWithFrame:(CGRect)frame andDelegate:(id<RBStepProgressBarDelegate>)stepDelegate;
 /**
  根据进行到的步骤重绘分步骤栏
 
