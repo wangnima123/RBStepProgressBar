@@ -21,16 +21,13 @@
     NSBundle *resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"]];
     
     if(!resBundle){
-        
-        NSString *SDKBundlePath = [[NSBundle mainBundle] pathForResource:@"RBStepProgressBar" ofType:@"framework"];
-        NSBundle *SDKBundle = [NSBundle bundleWithPath:SDKBundlePath];
+        // 获取bundle参数
+        NSBundle *SDKBundle = [NSBundle bundleForClass:[self class]];
         resBundle= [NSBundle bundleWithPath:[SDKBundle pathForResource:@"Resources" ofType:@"bundle"]];
     }
     
     self.notDoneIconImage = [UIImage imageNamed:notDoneImageName inBundle:resBundle compatibleWithTraitCollection:nil];
-//    [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:notDoneImageName]];
     self.doneIconImage = [UIImage imageNamed:doneImageName inBundle:resBundle compatibleWithTraitCollection:nil];
-//    [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:doneImageName]];
     if(!self.image) [self setImage:self.notDoneIconImage];
 }
 
