@@ -18,9 +18,11 @@
 - (void)setupIconWithNotDoneImageName:(NSString *)notDoneImageName
                      andDoneImageName:(NSString *)doneImageName{
     
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"];
-    self.notDoneIconImage = [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:notDoneImageName]];
-    self.doneIconImage = [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:doneImageName]];
+//    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"];
+//    self.notDoneIconImage = [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:notDoneImageName]];
+    self.notDoneIconImage = [UIImage imageNamed:[@"Resources.bundle" stringByAppendingPathComponent:notDoneImageName]];
+//    self.doneIconImage = [UIImage imageWithContentsOfFile:[bundlePath stringByAppendingPathComponent:doneImageName]];
+    self.doneIconImage = [UIImage imageNamed:[@"Resources.bundle" stringByAppendingPathComponent:doneImageName]];
     if(!self.image) [self setImage:self.notDoneIconImage];
 }
 
