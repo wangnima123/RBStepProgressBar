@@ -20,6 +20,16 @@
 		000F7EBF1FC83E82000CF8C2 /* RBStepIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EBE1FC83E82000CF8C2 /* RBStepIconImageView.m */; };
 		000F7EC51FC94B9D000CF8C2 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 000F7EC41FC94B9D000CF8C2 /* Resources.bundle */; };
 		000F7EC81FC959D4000CF8C2 /* RBStepTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */; };
+		00C9CF3A1FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */; };
+		00C9CF411FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C9CF401FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m */; };
+		00C9CF461FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */; };
+		00C9CF471FE107A1008356F8 /* RBStepProgressBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00C9CF4F1FE1094C008356F8 /* RBStepProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F7EB51FC83763000CF8C2 /* RBStepProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00C9CF501FE10973008356F8 /* RBStepProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EB61FC83763000CF8C2 /* RBStepProgressBar.m */; };
+		00C9CF511FE10973008356F8 /* RBStepLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EBB1FC83E19000CF8C2 /* RBStepLineView.m */; };
+		00C9CF521FE10973008356F8 /* RBStepIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EBE1FC83E82000CF8C2 /* RBStepIconImageView.m */; };
+		00C9CF531FE10973008356F8 /* RBStepTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */; };
+		00C9CF541FE10994008356F8 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 000F7EC41FC94B9D000CF8C2 /* Resources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +47,42 @@
 			remoteGlobalIDString = 000F7E7E1FC83714000CF8C2;
 			remoteInfo = RBStepProgressBarDemo;
 		};
+		00C9CF3B1FE107A1008356F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000F7E771FC83714000CF8C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C9CF301FE107A1008356F8;
+			remoteInfo = RBStepProgressBarFramework;
+		};
+		00C9CF3D1FE107A1008356F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000F7E771FC83714000CF8C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000F7E7E1FC83714000CF8C2;
+			remoteInfo = RBStepProgressBarDemo;
+		};
+		00C9CF441FE107A1008356F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000F7E771FC83714000CF8C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C9CF301FE107A1008356F8;
+			remoteInfo = RBStepProgressBarFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00C9CF4D1FE107A1008356F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00C9CF471FE107A1008356F8 /* RBStepProgressBar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		000F7E7F1FC83714000CF8C2 /* RBStepProgressBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBStepProgressBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +111,11 @@
 		000F7EC41FC94B9D000CF8C2 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		000F7EC61FC959D4000CF8C2 /* RBStepTitleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBStepTitleLabel.h; sourceTree = "<group>"; };
 		000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBStepTitleLabel.m; sourceTree = "<group>"; };
+		00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBStepProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C9CF341FE107A1008356F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C9CF391FE107A1008356F8 /* RBStepProgressBarFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBStepProgressBarFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C9CF401FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBStepProgressBarFrameworkTests.m; sourceTree = "<group>"; };
+		00C9CF421FE107A1008356F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C9CF461FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +141,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00C9CF2D1FE107A1008356F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C9CF361FE107A1008356F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C9CF3A1FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +165,8 @@
 				000F7E811FC83714000CF8C2 /* RBStepProgressBarDemo */,
 				000F7E9A1FC83714000CF8C2 /* RBStepProgressBarDemoTests */,
 				000F7EA51FC83714000CF8C2 /* RBStepProgressBarDemoUITests */,
+				00C9CF321FE107A1008356F8 /* RBStepProgressBarFramework */,
+				00C9CF3F1FE107A1008356F8 /* RBStepProgressBarFrameworkTests */,
 				000F7E801FC83714000CF8C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +177,8 @@
 				000F7E7F1FC83714000CF8C2 /* RBStepProgressBarDemo.app */,
 				000F7E971FC83714000CF8C2 /* RBStepProgressBarDemoTests.xctest */,
 				000F7EA21FC83714000CF8C2 /* RBStepProgressBarDemoUITests.xctest */,
+				00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */,
+				00C9CF391FE107A1008356F8 /* RBStepProgressBarFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +235,35 @@
 			path = RBStepProgressBar;
 			sourceTree = "<group>";
 		};
+		00C9CF321FE107A1008356F8 /* RBStepProgressBarFramework */ = {
+			isa = PBXGroup;
+			children = (
+				00C9CF341FE107A1008356F8 /* Info.plist */,
+			);
+			path = RBStepProgressBarFramework;
+			sourceTree = "<group>";
+		};
+		00C9CF3F1FE107A1008356F8 /* RBStepProgressBarFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				00C9CF401FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m */,
+				00C9CF421FE107A1008356F8 /* Info.plist */,
+			);
+			path = RBStepProgressBarFrameworkTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00C9CF2E1FE107A1008356F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C9CF4F1FE1094C008356F8 /* RBStepProgressBar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		000F7E7E1FC83714000CF8C2 /* RBStepProgressBarDemo */ = {
@@ -175,10 +273,12 @@
 				000F7E7B1FC83714000CF8C2 /* Sources */,
 				000F7E7C1FC83714000CF8C2 /* Frameworks */,
 				000F7E7D1FC83714000CF8C2 /* Resources */,
+				00C9CF4D1FE107A1008356F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				00C9CF451FE107A1008356F8 /* PBXTargetDependency */,
 			);
 			name = RBStepProgressBarDemo;
 			productName = RBStepProgressBarDemo;
@@ -221,6 +321,43 @@
 			productReference = 000F7EA21FC83714000CF8C2 /* RBStepProgressBarDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		00C9CF301FE107A1008356F8 /* RBStepProgressBarFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C9CF4C1FE107A1008356F8 /* Build configuration list for PBXNativeTarget "RBStepProgressBarFramework" */;
+			buildPhases = (
+				00C9CF2C1FE107A1008356F8 /* Sources */,
+				00C9CF2D1FE107A1008356F8 /* Frameworks */,
+				00C9CF2E1FE107A1008356F8 /* Headers */,
+				00C9CF2F1FE107A1008356F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBStepProgressBarFramework;
+			productName = RBStepProgressBarFramework;
+			productReference = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		00C9CF381FE107A1008356F8 /* RBStepProgressBarFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C9CF4E1FE107A1008356F8 /* Build configuration list for PBXNativeTarget "RBStepProgressBarFrameworkTests" */;
+			buildPhases = (
+				00C9CF351FE107A1008356F8 /* Sources */,
+				00C9CF361FE107A1008356F8 /* Frameworks */,
+				00C9CF371FE107A1008356F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00C9CF3C1FE107A1008356F8 /* PBXTargetDependency */,
+				00C9CF3E1FE107A1008356F8 /* PBXTargetDependency */,
+			);
+			name = RBStepProgressBarFrameworkTests;
+			productName = RBStepProgressBarFrameworkTests;
+			productReference = 00C9CF391FE107A1008356F8 /* RBStepProgressBarFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +381,15 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 000F7E7E1FC83714000CF8C2;
 					};
+					00C9CF301FE107A1008356F8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					00C9CF381FE107A1008356F8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 000F7E7E1FC83714000CF8C2;
+					};
 				};
 			};
 			buildConfigurationList = 000F7E7A1FC83714000CF8C2 /* Build configuration list for PBXProject "RBStepProgressBarDemo" */;
@@ -262,6 +408,8 @@
 				000F7E7E1FC83714000CF8C2 /* RBStepProgressBarDemo */,
 				000F7E961FC83714000CF8C2 /* RBStepProgressBarDemoTests */,
 				000F7EA11FC83714000CF8C2 /* RBStepProgressBarDemoUITests */,
+				00C9CF301FE107A1008356F8 /* RBStepProgressBarFramework */,
+				00C9CF381FE107A1008356F8 /* RBStepProgressBarFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +434,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		000F7EA01FC83714000CF8C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C9CF2F1FE107A1008356F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C9CF541FE10994008356F8 /* Resources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C9CF371FE107A1008356F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,6 +488,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00C9CF2C1FE107A1008356F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C9CF501FE10973008356F8 /* RBStepProgressBar.m in Sources */,
+				00C9CF511FE10973008356F8 /* RBStepLineView.m in Sources */,
+				00C9CF521FE10973008356F8 /* RBStepIconImageView.m in Sources */,
+				00C9CF531FE10973008356F8 /* RBStepTitleLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C9CF351FE107A1008356F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C9CF411FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -337,6 +519,21 @@
 			isa = PBXTargetDependency;
 			target = 000F7E7E1FC83714000CF8C2 /* RBStepProgressBarDemo */;
 			targetProxy = 000F7EA31FC83714000CF8C2 /* PBXContainerItemProxy */;
+		};
+		00C9CF3C1FE107A1008356F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C9CF301FE107A1008356F8 /* RBStepProgressBarFramework */;
+			targetProxy = 00C9CF3B1FE107A1008356F8 /* PBXContainerItemProxy */;
+		};
+		00C9CF3E1FE107A1008356F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000F7E7E1FC83714000CF8C2 /* RBStepProgressBarDemo */;
+			targetProxy = 00C9CF3D1FE107A1008356F8 /* PBXContainerItemProxy */;
+		};
+		00C9CF451FE107A1008356F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C9CF301FE107A1008356F8 /* RBStepProgressBarFramework */;
+			targetProxy = 00C9CF441FE107A1008356F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,6 +749,87 @@
 			};
 			name = Release;
 		};
+		00C9CF481FE107A1008356F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8ZRW75764F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RBStepProgressBarFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmcm.RBStepProgressBarFramework;
+				PRODUCT_MODULE_NAME = RBStepProgressBar;
+				PRODUCT_NAME = RBStepProgressBar;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		00C9CF491FE107A1008356F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8ZRW75764F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RBStepProgressBarFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmcm.RBStepProgressBarFramework;
+				PRODUCT_MODULE_NAME = RBStepProgressBar;
+				PRODUCT_NAME = RBStepProgressBar;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		00C9CF4A1FE107A1008356F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZRW75764F;
+				INFOPLIST_FILE = RBStepProgressBarFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmcm.RBStepProgressBarFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBStepProgressBarDemo.app/RBStepProgressBarDemo";
+			};
+			name = Debug;
+		};
+		00C9CF4B1FE107A1008356F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZRW75764F;
+				INFOPLIST_FILE = RBStepProgressBarFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmcm.RBStepProgressBarFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBStepProgressBarDemo.app/RBStepProgressBarDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,6 +865,24 @@
 			buildConfigurations = (
 				000F7EB21FC83715000CF8C2 /* Debug */,
 				000F7EB31FC83715000CF8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00C9CF4C1FE107A1008356F8 /* Build configuration list for PBXNativeTarget "RBStepProgressBarFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C9CF481FE107A1008356F8 /* Debug */,
+				00C9CF491FE107A1008356F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00C9CF4E1FE107A1008356F8 /* Build configuration list for PBXNativeTarget "RBStepProgressBarFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C9CF4A1FE107A1008356F8 /* Debug */,
+				00C9CF4B1FE107A1008356F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
