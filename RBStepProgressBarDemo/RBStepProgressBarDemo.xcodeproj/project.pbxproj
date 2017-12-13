@@ -30,6 +30,10 @@
 		00C9CF521FE10973008356F8 /* RBStepIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EBE1FC83E82000CF8C2 /* RBStepIconImageView.m */; };
 		00C9CF531FE10973008356F8 /* RBStepTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */; };
 		00C9CF541FE10994008356F8 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 000F7EC41FC94B9D000CF8C2 /* Resources.bundle */; };
+		00C9CFA41FE15470008356F8 /* RBStepLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F7EBA1FC83E19000CF8C2 /* RBStepLineView.h */; };
+		00C9CFA51FE15470008356F8 /* RBStepIconImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F7EBD1FC83E82000CF8C2 /* RBStepIconImageView.h */; };
+		00C9CFA61FE15470008356F8 /* RBStepViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F7EC31FC9425A000CF8C2 /* RBStepViewDelegate.h */; };
+		00C9CFA71FE15470008356F8 /* RBStepTitleLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F7EC61FC959D4000CF8C2 /* RBStepTitleLabel.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C9CF4F1FE1094C008356F8 /* RBStepProgressBar.h in Headers */,
+				00C9CFA41FE15470008356F8 /* RBStepLineView.h in Headers */,
+				00C9CFA51FE15470008356F8 /* RBStepIconImageView.h in Headers */,
+				00C9CFA61FE15470008356F8 /* RBStepViewDelegate.h in Headers */,
+				00C9CFA71FE15470008356F8 /* RBStepTitleLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

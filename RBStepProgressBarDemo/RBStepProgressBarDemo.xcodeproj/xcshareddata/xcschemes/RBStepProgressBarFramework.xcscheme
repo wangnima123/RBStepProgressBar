@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00C9CF301FE107A1008356F8"
-               BuildableName = "RBStepProgressBarFramework.framework"
+               BuildableName = "RBStepProgressBar.framework"
                BlueprintName = "RBStepProgressBarFramework"
                ReferencedContainer = "container:RBStepProgressBarDemo.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "00C9CF301FE107A1008356F8"
-            BuildableName = "RBStepProgressBarFramework.framework"
+            BuildableName = "RBStepProgressBar.framework"
             BlueprintName = "RBStepProgressBarFramework"
             ReferencedContainer = "container:RBStepProgressBarDemo.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "00C9CF301FE107A1008356F8"
-            BuildableName = "RBStepProgressBarFramework.framework"
+            BuildableName = "RBStepProgressBar.framework"
             BlueprintName = "RBStepProgressBarFramework"
             ReferencedContainer = "container:RBStepProgressBarDemo.xcodeproj">
          </BuildableReference>
