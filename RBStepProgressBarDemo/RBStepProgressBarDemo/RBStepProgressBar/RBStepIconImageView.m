@@ -19,7 +19,6 @@
                      andDoneImageName:(NSString *)doneImageName{
     
     NSBundle *resBundle = nil;
-    
 #ifndef RBSDKEnvironment
     resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"]];
 #else
