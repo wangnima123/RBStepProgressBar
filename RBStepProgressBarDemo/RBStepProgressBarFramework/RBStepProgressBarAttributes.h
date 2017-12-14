@@ -10,6 +10,5 @@
 #define RBStepProgressBarAttributes_h
 
 #define RBSDKEnvironment
-#import "RBStepProgressBar.h"
 
 #endif /* RBStepProgressBarAttributes_h */
