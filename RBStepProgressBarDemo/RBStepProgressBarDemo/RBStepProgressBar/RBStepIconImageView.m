@@ -17,14 +17,16 @@
 
 - (void)setupIconWithNotDoneImageName:(NSString *)notDoneImageName
                      andDoneImageName:(NSString *)doneImageName{
-
-    NSBundle *resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"]];
     
-    if(!resBundle){
-        // 获取bundle参数
-        NSBundle *SDKBundle = [NSBundle bundleForClass:[self class]];
-        resBundle= [NSBundle bundleWithPath:[SDKBundle pathForResource:@"Resources" ofType:@"bundle"]];
-    }
+    NSBundle *resBundle = nil;
+    
+#ifndef RBSDKEnvironment
+    resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"]];
+#else
+    // 获取SDK bundle参数
+    NSBundle *SDKBundle = [NSBundle bundleForClass:[self class]];
+    resBundle= [NSBundle bundleWithPath:[SDKBundle pathForResource:@"Resources" ofType:@"bundle"]];
+#endif
     
     self.notDoneIconImage = [UIImage imageNamed:notDoneImageName inBundle:resBundle compatibleWithTraitCollection:nil];
     self.doneIconImage = [UIImage imageNamed:doneImageName inBundle:resBundle compatibleWithTraitCollection:nil];
