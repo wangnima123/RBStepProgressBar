@@ -20,7 +20,7 @@
 		000F7EBF1FC83E82000CF8C2 /* RBStepIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EBE1FC83E82000CF8C2 /* RBStepIconImageView.m */; };
 		000F7EC51FC94B9D000CF8C2 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 000F7EC41FC94B9D000CF8C2 /* Resources.bundle */; };
 		000F7EC81FC959D4000CF8C2 /* RBStepTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */; };
-		0039BAA81FE22ACF00178C83 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0039BAA71FE22ACF00178C83 /* PrefixHeader.pch */; };
+		0039BAA51FE221DE00178C83 /* RBStepProgressBarAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0039BAA41FE221DE00178C83 /* RBStepProgressBarAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00C9CF3A1FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */; };
 		00C9CF411FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C9CF401FE107A1008356F8 /* RBStepProgressBarFrameworkTests.m */; };
 		00C9CF461FE107A1008356F8 /* RBStepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */; };
@@ -116,7 +116,7 @@
 		000F7EC41FC94B9D000CF8C2 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		000F7EC61FC959D4000CF8C2 /* RBStepTitleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBStepTitleLabel.h; sourceTree = "<group>"; };
 		000F7EC71FC959D4000CF8C2 /* RBStepTitleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBStepTitleLabel.m; sourceTree = "<group>"; };
-		0039BAA71FE22ACF00178C83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0039BAA41FE221DE00178C83 /* RBStepProgressBarAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStepProgressBarAttributes.h; sourceTree = "<group>"; };
 		00C9CF311FE107A1008356F8 /* RBStepProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBStepProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C9CF341FE107A1008356F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C9CF391FE107A1008356F8 /* RBStepProgressBarFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBStepProgressBarFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,8 +244,8 @@
 		00C9CF321FE107A1008356F8 /* RBStepProgressBarFramework */ = {
 			isa = PBXGroup;
 			children = (
+				0039BAA41FE221DE00178C83 /* RBStepProgressBarAttributes.h */,
 				00C9CF341FE107A1008356F8 /* Info.plist */,
-				0039BAA71FE22ACF00178C83 /* PrefixHeader.pch */,
 			);
 			path = RBStepProgressBarFramework;
 			sourceTree = "<group>";
@@ -266,11 +266,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0039BAA51FE221DE00178C83 /* RBStepProgressBarAttributes.h in Headers */,
 				00C9CF4F1FE1094C008356F8 /* RBStepProgressBar.h in Headers */,
 				00C9CFA41FE15470008356F8 /* RBStepLineView.h in Headers */,
 				00C9CFA51FE15470008356F8 /* RBStepIconImageView.h in Headers */,
 				00C9CFA61FE15470008356F8 /* RBStepViewDelegate.h in Headers */,
-				0039BAA81FE22ACF00178C83 /* PrefixHeader.pch in Headers */,
 				00C9CFA71FE15470008356F8 /* RBStepTitleLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,7 +772,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/RBStepProgressBarFramework/PrefixHeader.pch";
 				INFOPLIST_FILE = RBStepProgressBarFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -801,7 +800,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/RBStepProgressBarFramework/PrefixHeader.pch";
 				INFOPLIST_FILE = RBStepProgressBarFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
